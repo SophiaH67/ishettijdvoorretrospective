@@ -7,4 +7,5 @@ RUN go build -o main main.go
 FROM scratch
 COPY --from=builder /app/main ./
 COPY ./images/ ./images/
+COPY ./web/ ./web/
 ENTRYPOINT ["/main"]
